@@ -152,14 +152,14 @@ client.on('message', message => {
     //unwarn
       if (args[0].toLowerCase() === prefix + "clw") {
         let member = message.mentions.members.first()
-        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(" :Crown: **You dont have the permission to use this commande** ||Al 7mar|| ")
-        if(!member) return message.channel.send(":Crown: **Sorry I Can't found this member** :disappointed_relieved: ")
-        if(member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send(":Crown: **You Can't Unwarn this member** :expressionless: ")
-        if(!member.manageable) return message.channel.send(":Crown: **Sorry I Can't Unwarn this member** :cry: ")
-        if(!warns[member.id] || !warns[member.id].length) return message.channel.send(":Crown: **This member have no warns** ")
+        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(" **You dont have the permission to use this commande** ||Al 7mar|| ")
+        if(!member) return message.channel.send(" **Sorry I Can't found this member** :disappointed_relieved: ")
+        if(member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send(" **You Can't Unwarn this member** :expressionless: ")
+        if(!member.manageable) return message.channel.send(" **Sorry I Can't Unwarn this member** :cry: ")
+        if(!warns[member.id] || !warns[member.id].length) return message.channel.send(" **This member have no warns** ")
         warns[member.id].shift()
         fs.writeFileSync('./warns.json', JSON.stringify(warns))
-        message.channel.send(":Crown: **Last Warn for** " + member + " **Has been deleted** :grin:  ")
+        message.channel.send("**Last Warn for** " + member + " **Has been deleted** :grin:  ")
     }
 });
 

@@ -1,0 +1,15 @@
+{
+  "name": "kingdom",
+  "version": "0.0.1",
+  "description": "Kingdom Bot System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kingdom",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security"
+  }
+}
